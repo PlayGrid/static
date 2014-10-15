@@ -3,13 +3,14 @@
    ========================================================================== */
 
 body {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
     background-color: #111;
     color: #f0f0f0;
 }
 
-/* .navbar {
+.navbar {
 	min-height: 30px;
 	max-height: 30px;
 	height: 30px;
@@ -143,7 +144,7 @@ h1 {
 
 
 #menu li a:hover {
-	background-color: #a22; 871515;
+	background-color: #a22; /*871515;*/
 }
 
 #video {
@@ -151,7 +152,7 @@ h1 {
 	background: url(../img/hero.png) no-repeat top center scroll transparent;
 	background-size: cover;
 	cursor: pointer;
-	display: table;
+	/* display: table; */
 	width: 100%;
 	border-top: 1px solid #939393;
 	border-bottom: 1px solid #939393;
@@ -209,7 +210,7 @@ hr {
 }
 
 #floatingCTA {
-	background: #a22; 871515;
+	background: #a22; /*871515;*/
 	width: 220px;
 	padding: 20px 0px 10px;
 	position: fixed;
@@ -220,7 +221,7 @@ hr {
 	font: 300 20px 'Oswald', 'Raleway', sans-serif;
 }
 
-ICONS
+/* ICONS */
 
 @charset "UTF-8";
 
@@ -277,9 +278,9 @@ ICONS
 
 
 
-
+/*
     Daron's Style Additions 
-
+ */
 
 body {
     padding-top: 50px;
@@ -358,7 +359,7 @@ body {
 }
 .popover.top>.arrow:after {
     border-top-color: #333;
-} */
+}
 
 
 
