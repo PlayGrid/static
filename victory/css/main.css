@@ -1,5 +1,3 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -25,10 +23,6 @@ body {
 	font-size: 12px;
 }
 
-.navbar a:hover {
-	color: #a22; /*871515;*/
-	text-decoration: none;
-}
 
 .navbar img.language {
 	margin-top: -2px;
@@ -155,11 +149,13 @@ h1 {
 
 #video {
 	height: 551px;
-	background: url(../img/thumbnail.png) no-repeat top center scroll transparent;
+	background: url(../img/hero.png) no-repeat top center scroll transparent;
 	background-size: cover;
 	cursor: pointer;
-	display: table;
+	/* display: table; */
 	width: 100%;
+	border-top: 1px solid #939393;
+	border-bottom: 1px solid #939393;
 }
 
 #video .watch {
@@ -177,16 +173,19 @@ h1 {
 	margin: 130px 0;
 }
 
-.cta .victory-shield {
-	font-size: 80px;
-	color: #a22; /*871515;*/
+.victory {
+	font-size: 120px;
+	color: #d2222a; 
+}
+
+#about, #icons {
+	margin: 20px 0;
+	padding: 20px 0;
+	font-size: 16px;
 }
 
 #about {
 	border-top: 1px solid #5D5E69;
-	margin: 20px 0;
-	padding: 20px 0;
-	font-size: 16px;
 }
 
 #about blockquote {
@@ -204,7 +203,7 @@ h1 {
 	text-align: center;
 }
 
-#about hr {
+hr {
 	height: 1px;
 	border-top: 1px dashed #333;
 	margin: 2em;
@@ -213,17 +212,13 @@ h1 {
 #floatingCTA {
 	background: #a22; /*871515;*/
 	width: 220px;
-	padding: 10px 0px 10px;
+	padding: 20px 0px 10px;
 	position: fixed;
 	bottom: 0px;
 	right: 0;
 	text-align: center;
 	color: #111;
 	font: 300 20px 'Oswald', 'Raleway', sans-serif;
-}
-
-#floatingCTA .victory-shield {
-	font-size: 50px;
 }
 
 /* ICONS */
@@ -268,22 +263,103 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.victory-shield:before {
-  content: "s";
-}
 .victory-fighter:before {
   content: "f";
 }
+.victory-pentagon:before {
+  content: "p";
+}
+.victory-shield:before {
+  content: "h";
+}
+.victory-star:before {
+  content: "s";
+}
 
 
 
+/*
+    Daron's Style Additions 
+ */
 
+body {
+    padding-top: 50px;
+}
 
+#sign-up {
+    display: none;
+}
 
+#apply-modal .modal-content,
+#apply-modal button, 
+#apply-modal button:hover, 
+#apply-modal .form-control {
+    background-color: #000;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+}
+#apply-modal textarea {
+    resize: none;
+}
 
+#apply-modal .modal-content {
+    border-radius: 8px;
+}
 
+#earlyAccess h2 {
+	text-align: center;
+}
 
+.modal-dialog {
+	margin-top: 100px;
+}
 
+.navbar a, .navbar a:visited {
+    line-height: 9px;
+}
+
+.nav>li>a:hover, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #3F3F3F;
+}
+
+.open>.dropdown-menu {
+    background-color: #3F3F3F;
+}
+
+#floatingCTA a, #floatingCTA a:hover, .cta>a, .cta>a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#messages .alert {
+    margin: 0px 15px 0px 15px;
+}
+.alert-success {
+	background-image: -webkit-linear-gradient(top,#97C386 0,#31A800 100%);
+	background-image: linear-gradient(to bottom,#97C386 0,#31A800 100%);
+	form.Microsoft.gradient(startColorstr='#97C386', endColorstr='#31A800', GradientType=0);
+	border-color: #1A5A00;
+	color: #D5FCDB;
+}
+
+.watch-bar {
+    background-color: rgba(255, 255, 255, 0.31);
+}
+
+.text-muted {
+	color: #666;
+}
+
+.popover {
+	background-color: #333;
+}
+.popover.top>.arrow:after {
+    border-top-color: #333;
+}
 
 
 

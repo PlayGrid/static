@@ -1,134 +1,250 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Victory Command</title>
-        <meta name="description" content="">
+<head>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/lightbox.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/main.css">
+	<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/lightbox.css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css">
+<body>
+	<div id="menu-fixed">
+	    <div class="menu-fixed container">
+	        <div id="logo-fixed">
+	            <img src="./img/logo.png" alt="Victory Command" title="Victory Command" />
+	        </div>
+	        <ul class="text-center">
+	            <li><a href="#" data-scroll="menu" class="scroll">HOME</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#apply-modal">JOIN</a></li>
+	            <li><a href="#" data-scroll="about" class="scroll">ABOUT</a></li>
+	        </ul>
+	    </div>
+	</div>
+	<div class="container">
+	    <div id="menu">
+	        <div class="menu-container clearfix">
+	            <ul class="nav navbar-nav navbar-right">
+	                <li><a href="#" data-scroll="menu" class="scroll">HOME</a></li>
+	                <li><a href="#" data-toggle="modal" data-target="#apply-modal">JOIN</a></li>
+	                <li><a href="#" data-scroll="about" class="scroll">ABOUT</a></li>
+	            </ul>
+	        </div>
+	        <div id="logo">
+	            <img src="./img/logo.png" alt="Victory Command" title="Victory Command" />
+	        </div>
+	    </div>
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-      <div id="admin-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-6">
-              <a href="#">Login or create an account</a>
-            </div>
-            <div class="col-xs-6 text-right">
-              <a href="#">
-                <img class="language" src="img/english.jpg" alt="English" title="English" />
-                English
-                <i class="fa fa-angle-down"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="menu-fixed">
-        <div class="menu-fixed container">
-          <div id="logo-fixed">
-            <img src="img/logo.png" alt="Victory Command" title="Victory Command" />
-          </div>
-          <ul class="text-center">
-            <li><a href="#" data-scroll="menu" class="scroll">HOME</a></li>
-            <li><a href="#" data-scroll="join" class="scroll">JOIN</a></li>
-            <li><a href="#" data-scroll="about" class="scroll">ABOUT</a></li>
-          </ul>         
-        </div>
-      </div>
 
-      <div class="container">
-        <div id="menu">
-          <div class="menu-container clearfix">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" data-scroll="menu" class="scroll">HOME</a></li>
-              <li><a href="#" data-scroll="join" class="scroll">JOIN</a></li>
-              <li><a href="#" data-scroll="about" class="scroll">ABOUT</a></li>
-            </ul>
-          </div>
-          <div id="logo">
-            <img src="img/logo.png" alt="Victory Command" title="Victory Command" />
-          </div>
+	    <div id="video">
+	        <div class="watch" style="display:none;">
+	           <div class="watch-bar">
+		           WATCH<br />TRAILER
+	           </div>
+	        </div>
+	    </div>
+        <div id="player-wrapper" style="display:none;">
+   	        <iframe id="vimeoplayer" src="http://player.vimeo.com/video/108167297?api=1&player_id=vimeoplayer&badge=0&portrait=0&byline=0&title=0" width="980" height="551" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <div id="video">
-          <div class="watch">WATCH<br />TRAILER</div>
-          <div id="player"></div>
-        </div>
-        <div class="cta text-center" id="join">
-          <h1 class="victory victory-shield"></h1>
-          <h1>REQUEST EARLY ACCESS</h1>
-        </div>
-        <div id="about">
-          <h2>VAINGLORY IS THE MULTIPLAYER ONLINE BATTLE ARENA (MOBA) PERFECTED FOR TOUCH</h2>
-          <blockquote>
-            <p>“We’ve been waiting for a game like Vainglory to come along on touch screens. It’s not just the best touch screen MOBA out there; it’s a completely legit core game in its own right. Once you play it, you’ll understand why we got excited about it!”</p>
-            <footer>M. Scott Reinders, CEO, MOBAFire</footer>
-          </blockquote>
-          <hr />
-          <h2>EXPERIENCE CORE GAMING ON YOUR TOUCH SCREEN</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <ul>
-                <li>Dive into intense MOBA action by developers formerly at Riot Games &amp; Blizzard Entertainment.</li>
-                <li>Immerse yourself in a vivid world with ultra-high fidelity graphics.</li>
-                <li>Play with intuitive precision controls.</li>
-                <li>Blaze through fast-paced, 20-minute matches.</li>
-              </ul>
+        
+	    <div id="icons" class="text-center">
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1 class="victory victory-shield" data-content="Tanks, Jeeps, Infantry, Support--Each with their own power ups and abilities"></h1>
+                    <h2>Choose your Company</h2>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="victory victory-pentagon" data-content="Grab four friends or jump into a lobby--Victory Command has the ability to quickly match you with a group of similarly-skilled competitors."></h1>
+                    <h2>Form your Team</h2>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="victory victory-star" data-content="Use deep strategic thinking and coordinated team-play to defeat your enemies in intense combat."></h1>
+                    <h2>Battle 5v5 Team Combat</h2>
+                </div>
             </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Become powerful heroes with unique abilities.&nbsp;</li>
-                <li>Explore immense variety and flexibility in build paths for each hero.</li>
-                <li>New heroes and features coming regularly.</li>
-                <li>The global rollout of Vainglory starts in October 2014 for iPads (iPad 2 upwards), the iPhone 6 and the iPhone 6 Plus</li>
-              </ul>
-            </div>
-          </div>
-          <hr />
-          <h2>HIGH RESOLUTION SCREENSHOTS</h2>
-          <div class="row">
-            <div class="col-xs-6">
-              <a href="img/hr1-full.jpg" data-lightbox="hr" data-title="Screenshot-01">
-                <img class="img-rounded img-responsive" src="img/hr1.jpg" alt="Screenshot 01" />
-              </a>
-            </div>
-            <div class="col-xs-6">
-              <a href="img/hr2-full.jpg" data-lightbox="hr" data-title="Screenshot-02">
-                <img class="img-rounded img-responsive" src="img/hr2.jpg" alt="Screenshot 02" />
-              </a>
-            </div>
-          </div>
-          <hr />
-          <blockquote>
-            <p>Multiplayer battle arena gaming is the most popular game genre in the world, enjoyed by tens of millions of players every day. Vainglory brings this world-class competitive gaming to iOS.</p>
+            <br><br>
+            <br><br>
+            <br><br>
+	    </div>
+	    
+	    
+	    <div id="about">
+	        <h2>TEAM V TEAM &nbsp;&nbsp;<span class="victory-star"></span>&nbsp;&nbsp; REAL TIME STRATEGY</h2>
+	        <blockquote>
+	            <p>
+"Victory Command brings the highly strategic and tactical Multi-Unit Combat 
+Mechanics of Real Time Strategy games to the action -packed gameplay of 
+team-based arena combat."</p>
+	            <footer>Chris McKibbin, CEO, CDRV Media</footer>
+	        </blockquote>
+	        <hr />
+	        <h2>VICTORY HIGHLIGHTS</h2>
+	        <div class="row">
+	            <div class="col-md-6">
+                    <H3>Highly Strategic 5 vs 5 Team Combat</H3>
+                    <p>
+Teams must coordinate and cooperate to gain 
+advantages over their opponent and ensure 
+Ultimate Victory
+                    </p>
+                    <H3>Industry Defining RTS Gameplay</H3>
+                    <p>
+Multi-unit control, splitting, flanking, baiting, 
+trapping -- Sun Tzu meets Patton
+                    </p>
+	            </div>
 
-            <p>The rules are simple. Two teams battle to destroy a giant crystal in their opponent’s base. Think of it like capture the flag, but with crystals.</p>
-            <footer>Stephan (CaptainNeato) Sherman, CCO, Super Evil Megacorp</footer>
-          </blockquote>
-        </div>
-      </div> <!-- /container -->        
-      <div id="floatingCTA" class="hidden-xs hidden-sm">
-        <div class="victory victory-shield"></div>
-        <p>
-          REQUEST EARLY ACCESS
-        </p>
-      </div>
+	            <div class="col-md-6">
+                    <H3>Deep Meta-Game Progression</H3>
+                    <p>
+Earn and Command companies of different units: 
+Tanks, Jeeps, Infantry, ATVs; increase your power 
+with a variety of Company Perks and Abilities
+                    </p>
+                    <H3>Continuously updated</H3>
+                    <p>
+New companies, units, maps, perks, abilities, and events will be added on a scheduled basis
+                    </p>
+	            </div>
+	        </div>
+	        <hr />
+	        <h2>SCREENSHOTS</h2>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <a href="./img/SS0001.png" data-lightbox="hr" data-title="Screenshot-01">
+	                <img class="img-rounded img-responsive center-block" src="./img/SS0001-sm.png" alt="Screenshot 01" />
+	                </a>
+	            </div>
+	            <br class="visible-sm visible-xs">
+	            <div class="col-md-6">
+	                <a href="./img/SS0002.png" data-lightbox="hr" data-title="Screenshot-01">
+	                <img class="img-rounded img-responsive center-block" src="./img/SS0002-sm.png" alt="Screenshot 01" />
+	                </a>
+	            </div>
+	        </div>
+	        
+	        
+	        <hr />
+	        <div class="row">
+	            <div class="col-lg-12 text-center">
+<blockquote>
+Developed by Petroglyph Studios, the people who established the RTS genre with the renowned Dune and
+Command and Conquer series at Westwood Studios (acquired by EA).
+</blockquote>
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/vendor/lightbox.min.js"></script>
-      <script src="js/main.js"></script>
-    </body>
-</html>
+<blockquote>
+Co-Developed by Neoact Studios, creator of Chaos Online, a successful MOBA operating in 10 countries.
+</blockquote>
+
+<blockquote>
+Produced and Published by CDRV Media, industry veterans from EA, LucasArts, Blizzard, and
+Digital River.	
+</blockquote>
+	            </div>
+	        </div>
+	        
+	        <br><br>
+	        <div class="row">
+	            <div class="col-xs-4 text-center">
+	                <a href="http://www.petroglyphgames.com/" target="blank">
+	                <img src="./img/petroglyph-logo-sm.png" alt="Petroglyph Games" />
+	                </a>
+	            </div>
+	            <div class="col-xs-4 text-center">
+                    <a href="http://www.cdrvmedia.com/" target="blank">
+                    <img src="./img/cdrv-logo-sm.png" alt="CDRV Media" />
+                    </a>
+	            </div>
+	            <div class="col-xs-4 text-center">
+                    <a href="http://www.neoact.com/" target="blank">
+                    <img src="./img/neoact-logo-sm.png" alt="Neoact" />
+                    </a>
+	            </div>
+	        </div>
+	    </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+               <small class="text-muted">&copy; {% now "Y Victory Game Company LLC.</small>
+            </div>
+        </div>
+	</div>
+	<!-- /container -->       
+	 
+    <div id="floatingCTA">
+        <a href="#" data-toggle="modal" data-target="#apply-modal">
+			<div></div>
+			<p>
+			    REQUEST EARLY ACCESS
+			</p>
+		</a>
+	</div>
+	
+	
+	<!-- Apply Modal -->
+	<div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+                <form id="earlyAccess">
+                    <h2>APPLY FOR EARLY ACCESS</h2>
+		            <div class="modal-body">
+							<div class="form-group input-required">
+							    <input id="email" name="text" type="email" placeholder="Your email address (required)" class="form-control" required />
+							</div>
+							<div class="form-group">
+							    <textarea id="note" name="textarea" placeholder="Tell us why you would like early access." class="form-control" rows="5"></textarea>
+							</div>
+							<div class="has-error">
+                                <p class="errors help-block"></p>
+							</div>
+			                <button type="submit" class="btn">Apply</button>
+		            </div>
+                </form>
+	        </div>
+	    </div>
+	</div>
+
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="./js/vendor/bootstrap.min.js"></script>
+	<script src="./js/vendor/lightbox.min.js"></script>
+	<script src="http://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+	<script src="./js/main.js"></script>
+	
+	<script type="text/javascript">
+	/* victory icon popovers */
+	$(".victory").popover({ trigger: "hover", placement: "top"});
+	
+	$('#earlyAccess').submit(function (event) {
+		/* stop form from submitting normally */
+	    event.preventDefault();
+		
+	    var request = $.ajax({
+			type: "POST",
+			url: "{{ root_url }}{% url 'api:v2.1:player:apply",
+			data: {email: $('#email').val(), note: $('#note').val()},
+			headers: {Authorization: "PGP {{ request.game.untrusted_access_token }}"},
+			dataType: 'json'
+	    });
+		 
+		request.done(function( msg ) {
+			$("#earlyAccess .errors").empty();
+			$('#apply-modal').modal('hide');
+			$('#messages .thanks').remove();
+			$('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
+			$('#messages .thanks').slideDown().delay(5000).slideUp();
+			ga('send', 'event', 'beta', 'signup', 'cta');
+		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+			var message = "foo";
+			for(var key in jqXHR.responseJSON) {
+				$("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
+			}
+		});
+	});
+	
+    </script>
+</body>

@@ -1,12 +1,33 @@
-var $adminMenu = $('#admin-menu');
+var $adminMenu = $('#navbar');
 var $menuFixed = $('#menu-fixed');
 var $hidden = true;
 
 $(document).ready(function(){
-	$('#video').on('click', function() {
-		$('#video .watch').hide();
-		loadVideo();
-	});
+	
+    var iframe = $('#vimeoplayer')[0];
+    var player = $f(iframe);
+
+    // When the player is ready, add listeners for pause, finish, and playProgress
+    player.addEvent('ready', function() {
+    	$('.watch').show();
+        player.addEvent('finish', onFinish);
+    });
+
+    // Call the API when a button is pressed
+    $('#video').on('click', function() {
+    	player.api('play');
+    	if (typeof ga != 'undefined')
+    		ga('send', 'event', 'videos', 'play', 'Trailer01');
+    	$('#video').hide();
+    	$('#player-wrapper').show()
+    });
+
+    function onFinish(id) {
+        $('#video').show();
+        $('#player-wrapper').hide()
+    }
+	
+	
 
 	$(window).scroll(function(){
         if ($(this).scrollTop() > 200) {
@@ -40,42 +61,8 @@ $(document).ready(function(){
     	e.preventDefault();
     	$('html, body').animate({
         	scrollTop: $("#"+$(this).data('scroll')).offset().top - 100
-    	}, 2000);
+    	}, 200);
     });
 })
 
-// 1. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 2. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-function loadVideo() {
-	var video = $('#video');
-	player = new YT.Player('player', {
-	  height: video.height(),
-	  width: video.width(),
-	  videoId: 'ZD9fWUUeL00',
-	  events: {
-	    'onReady': onPlayerReady,
-	    'onStateChange': onPlayerStateChange
-	  }
-	});
-}
-
-function onPlayerReady(event) {
-	event.target.playVideo();
-}
-
-function onPlayerStateChange(event) {
-	if (event.data == YT.PlayerState.ENDED) {
-		$('#player').remove();
-		$('#video .watch').show();
-		$('#video').append('<div id="player"></div>');
-	}
-
-}
