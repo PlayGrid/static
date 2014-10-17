@@ -1,49 +1,80 @@
-<head>
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="./css/main.css">
-	<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./css/main.css">
+		<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
 
-<body>
+	<body>
+		<div class="container-fluid">
+			<iframe id="content-home" frameborder="0" src="./content/home.html" scrolling="no" seamless="seamless" style="border:none; overflow: hidden;" width="100%" height="2000px">Browser not compatible.</iframe>
+			
+			<footer>
+				<div class="row">
+					<div class="col-xs-4 text-center">
+						<a href="http://www.petroglyphgames.com/" target="blank">
+						<img src="./img/petroglyph-logo-sm.png" alt="Petroglyph Games" />
+						</a>
+					</div>
+					<div class="col-xs-4 text-center">
+						<a href="http://www.cdrvmedia.com/" target="blank">
+						<img src="./img/cdrv-logo-sm.png" alt="CDRV Media" />
+						</a>
+					</div>
+					<div class="col-xs-4 text-center">
+						<a href="http://www.neoact.com/" target="blank">
+						<img src="./img/neoact-logo-sm.png" alt="Neoact" />
+						</a>
+					</div>
+				</div>
+			</footer>
 
-	<iframe frameborders="0" src="./content/home.html" style="border:none; position: absolute; height: 100%; width:100%;">Browser not compatible.</iframe>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+				   <small class="text-muted">&copy; {% now "Y" %} Victory Game Company LLC.</small>
+				</div>
+			</div>
 
+		    <div id="floatingCTA">
+		        <a href="#" data-toggle="modal" data-target="#apply-modal">
+					<div></div>
+					<p>
+					    REQUEST EARLY ACCESS
+					</p>
+				</a>
+			</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="./js/vendor/bootstrap.min.js"></script>
-	
-	<script type="text/javascript">
-	
-	$('#earlyAccess').submit(function (event) {
-		/* stop form from submitting normally */
-	    event.preventDefault();
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+			<script src="./js/vendor/bootstrap.min.js"></script>
+				
+			<script>
+				// listen for events from the iframe
+				window.addEventListener( "message",
+					function (e) {
+						if(e.origin == "null" || e.origin == window.location.origin) {
+							var data = e.data.data;
+							switch(e.data.message) {
+								case 'content_height_change':
+									var height = data;
+									$("#content-home").height(height);
+									break;
+							}
+						}
+				  	},
+				false);
+
+				// send cta click message to iframe
+				var win = document.getElementById("content-home").contentWindow;
+				$("#floatingCTA").click(function(){
+					var origin = window.location.origin != "file://" ? window.location.origin : "*";
+					win.postMessage({message: "apply"}, origin);              
+				});				
+			</script>			
 		
-	    var request = $.ajax({
-			type: "POST",
-			url: "{{ root_url }}{% url 'api:v2.1:player:apply",
-			data: {email: $('#email').val(), note: $('#note').val()},
-			headers: {Authorization: "PGP {{ request.game.untrusted_access_token }}"},
-			dataType: 'json'
-	    });
-		 
-		request.done(function( msg ) {
-			$("#earlyAccess .errors").empty();
-			$('#apply-modal').modal('hide');
-			$('#messages .thanks').remove();
-			$('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
-			$('#messages .thanks').slideDown().delay(5000).slideUp();
-			ga('send', 'event', 'beta', 'signup', 'cta');
-		});
-		 
-		request.fail(function( jqXHR, textStatus ) {
-			var message = "foo";
-			for(var key in jqXHR.responseJSON) {
-				$("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
-			}
-		});
-	});
-	
-    </script>
-</body>
+		</div>
+
+	</body>
+</html>

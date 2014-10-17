@@ -1,11 +1,11 @@
+<!DOCTYPE html>
 <head>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./css/lightbox.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="./css/content.css">
-	<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 	        </ul>
 	    </div>
 	</div>
-	<div class="container">
+	<div id="content" class="container">
 	    <div id="menu">
 	        <div class="menu-container clearfix">
 	            <ul class="nav navbar-nav navbar-right">
@@ -44,7 +44,7 @@
 	        </div>
 	    </div>
         <div id="player-wrapper" style="display:none;">
-   	        <iframe id="vimeoplayer" src="http://player.vimeo.com/video/108167297?api=1&player_id=vimeoplayer&badge=0&portrait=0&byline=0&title=0" width="980" height="551" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+   	        <iframe id="vimeoplayer" src="//player.vimeo.com/video/108167297?api=1&player_id=vimeoplayer&badge=0&portrait=0&byline=0&title=0" width="980" height="551" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         
 	    <div id="icons" class="text-center">
@@ -143,42 +143,10 @@ Digital River.
 </blockquote>
 	            </div>
 	        </div>
-	        
-	        <br><br>
-	        <div class="row">
-	            <div class="col-xs-4 text-center">
-	                <a href="http://www.petroglyphgames.com/" target="blank">
-	                <img src="./img/petroglyph-logo-sm.png" alt="Petroglyph Games" />
-	                </a>
-	            </div>
-	            <div class="col-xs-4 text-center">
-                    <a href="http://www.cdrvmedia.com/" target="blank">
-                    <img src="./img/cdrv-logo-sm.png" alt="CDRV Media" />
-                    </a>
-	            </div>
-	            <div class="col-xs-4 text-center">
-                    <a href="http://www.neoact.com/" target="blank">
-                    <img src="./img/neoact-logo-sm.png" alt="Neoact" />
-                    </a>
-	            </div>
-	        </div>
 	    </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-               <small class="text-muted">&copy; {% now "Y Victory Game Company LLC.</small>
-            </div>
-        </div>
 	</div>
-	<!-- /container -->       
-	 
-    <div id="floatingCTA">
-        <a href="#" data-toggle="modal" data-target="#apply-modal">
-			<div></div>
-			<p>
-			    REQUEST EARLY ACCESS
-			</p>
-		</a>
-	</div>
+	
+	<!-- /container -->      
 	
 	
 	<!-- Apply Modal -->
@@ -206,12 +174,13 @@ Digital River.
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 	<script src="./js/vendor/bootstrap.min.js"></script>
 	<script src="./js/vendor/lightbox.min.js"></script>
-	<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-	<script src="./js/main.js"></script>
+	<script src="http://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+	<script src="./js/utils.js"></script>
+	<script src="./js/home.js"></script>
 	
 	<script type="text/javascript">
 	/* victory icon popovers */
