@@ -14,6 +14,48 @@ footer {
 	padding-bottom: 100px;
 }
 
+
+#menu-fixed {
+	position: fixed;
+	top: 5px;
+	width: 100%;
+	z-index: 1031;
+	display: none;
+}
+
+#menu-fixed ul {
+	margin: 5px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu-fixed ul li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+#menu-fixed ul li a,
+#menu-fixed ul li a:visited {
+	padding: 0 10px;
+	font: 300 1.2em 'Oswald', 'Raleway', sans-serif;
+	color: #f0f0f0;
+}
+
+#menu-fixed ul li a:hover {
+	color: #a22;
+	text-decoration: none;
+}
+
+#logo-fixed {
+	width: 150px;
+	margin: 0 auto;
+}
+
+#logo-fixed img {
+	width: 100%;
+}
+
 #floatingCTA {
 	background: #a22; /*871515;*/
 	width: 220px;

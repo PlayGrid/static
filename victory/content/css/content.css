@@ -51,47 +51,6 @@ h1 {
 	z-index: 999 !important;
 }
 
-#menu-fixed {
-	position: fixed;
-	top: 5px;
-	width: 100%;
-	z-index: 1031;
-	display: none;
-}
-
-#menu-fixed ul {
-	margin: 5px 0 0;
-	padding: 0;
-	list-style: none;
-}
-
-#menu-fixed ul li {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-}
-
-#menu-fixed ul li a,
-#menu-fixed ul li a:visited {
-	padding: 0 10px;
-	font: 300 1.2em 'Oswald', 'Raleway', sans-serif;
-	color: #f0f0f0;
-}
-
-#menu-fixed ul li a:hover {
-	color: #a22;
-	text-decoration: none;
-}
-
-#logo-fixed {
-	width: 150px;
-	margin: 0 auto;
-}
-
-#logo-fixed img {
-	width: 100%;
-}
-
 #menu {
 	background: url(../img/menu.png) no-repeat top center scroll transparent;
 	margin: 0;
@@ -152,7 +111,7 @@ h1 {
 	background: url(../img/hero.png) no-repeat top center scroll transparent;
 	background-size: cover;
 	cursor: pointer;
-	/* display: table; */
+	display: table;
 	width: 100%;
 	border-top: 1px solid #939393;
 	border-bottom: 1px solid #939393;
@@ -332,6 +291,10 @@ body {
 
 .watch-bar {
     background-color: rgba(255, 255, 255, 0.31);
+    font: 300 22px 'Oswald', 'Raleway', sans-serif;
+    padding: 15px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 .text-muted {
