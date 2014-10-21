@@ -39,7 +39,7 @@ $(document).ready(function(){
     
     // detect content height changes and post to parent
     var prevHeight = $('#content').height();
-    postMessage("content_height_change", prevHeight, origin);
+    postMessage("content_height_change", prevHeight, send_origin);
     $( window ).resize(function() {
         var curHeight = $("#content").height();            
         if (prevHeight !== curHeight) {
