@@ -3,9 +3,10 @@ var vimeoPlayer = $f($('#vimeoplayer')[0]);
 
 $(document).ready(function(){
     // set the origin to "*" if running on test or local
+    var origin = window.location.origin;
     var testing = origin.search('rawgit');
-    var send_origin = testing ? "*" : window.location.origin;
-    var receive_origin = testing ? null : window.location.origin;
+    var send_origin = testing ? "*" : origin;
+    var receive_origin = testing ? null : origin;
 
     // When the player is ready, add listeners for pause, finish, and playProgress
     vimeoPlayer.addEvent('ready', function() {

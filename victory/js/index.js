@@ -7,9 +7,10 @@ $(document).ready(function(){
 	var adminMenuBaseHeight = $adminMenu.height();
 
 	// set the origin to "*" if running on test or local
+    var origin = window.location.origin;
 	var testing = origin.search('file://') > -1 || origin.search('test.playgrid.com') > -1 || origin.search('local.playgrid.com') > -1;
-	var send_origin = testing ? "*" : window.location.origin;
-	var receive_origin = testing ? null : window.location.origin;
+	var send_origin = testing ? "*" : origin;
+	var receive_origin = testing ? null : origin;
 
     // handle top menu on scroll
 	$(window).scroll(function(){
