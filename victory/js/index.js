@@ -1,9 +1,15 @@
 var $adminMenu = $('#admin-menu');
 var $menuFixed = $('#menu-fixed');
 var $hidden = true;
+
 	
 $(document).ready(function(){
 	var adminMenuBaseHeight = $adminMenu.height();
+
+	// set the origin to "*" if running on test or local
+	var testing = origin.search('file://') > -1 || origin.search('test.playgrid.com') > -1 || origin.search('local.playgrid.com') > -1;
+	var send_origin = testing ? "*" : window.location.origin;
+	var receive_origin = testing ? null : window.location.origin;
 
     // handle top menu on scroll
 	$(window).scroll(function(){
@@ -37,7 +43,7 @@ $(document).ready(function(){
 	// listen for events from the iframe
 	window.addEventListener( "message",
 		function (e) {
-			if(e.origin == "null" || e.origin == window.location.origin) {
+			if(e.origin == receive_origin) {
 				var data = e.data.data;
 				switch(e.data.message) {
 					case 'content_height_change':
@@ -52,7 +58,6 @@ $(document).ready(function(){
 	// send cta click message to iframe
 	var win = document.getElementById("content-home").contentWindow;
 	$("#floatingCTA").click(function(){
-		var origin = window.location.origin != "file://" ? window.location.origin : "*";
-		win.postMessage({message: "apply"}, origin);              
+		win.postMessage({message: "apply"}, send_origin);              
 	});		
 });		

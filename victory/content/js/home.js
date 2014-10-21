@@ -2,8 +2,12 @@ var $applyModal = $('#apply-modal');
 var vimeoPlayer = $f($('#vimeoplayer')[0]);
 
 $(document).ready(function(){
-    // When the player is ready, add listeners for pause, finish, and playProgress
+    // set the origin to "*" if running on test or local
+    var testing = origin.search('rawgit');
+    var send_origin = testing ? "*" : window.location.origin;
+    var receive_origin = testing ? null : window.location.origin;
 
+    // When the player is ready, add listeners for pause, finish, and playProgress
     vimeoPlayer.addEvent('ready', function() {
         $('.watch').show();
         vimeoPlayer.addEvent('finish', onFinish);
@@ -34,17 +38,11 @@ $(document).ready(function(){
     
     // detect content height changes and post to parent
     var prevHeight = $('#content').height();
-    var origin;
-    if(window.location.origin !== "file://") {
-        origin = window.location.origin;
-    } else {
-        origin = "*";
-    }
     postMessage("content_height_change", prevHeight, origin);
     $( window ).resize(function() {
         var curHeight = $("#content").height();            
         if (prevHeight !== curHeight) {
-            postMessage("content_height_change", curHeight, origin);
+            postMessage("content_height_change", curHeight, send_origin);
             prevHeight = curHeight;
         }            
     });
@@ -53,7 +51,7 @@ $(document).ready(function(){
     // listen for messages from parent 
     window.addEventListener( "message",
         function (e) {
-            if(e.origin == "null" || e.origin == window.location.origin) {
+            if(e.origin == receive_origin) {
                 var data = e.data.data;
                 switch(e.data.message) {
                     case 'apply':
