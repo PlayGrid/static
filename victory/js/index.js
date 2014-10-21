@@ -33,4 +33,26 @@ $(document).ready(function(){
 	        }
         }
     });
+
+	// listen for events from the iframe
+	window.addEventListener( "message",
+		function (e) {
+			if(e.origin == "null" || e.origin == window.location.origin) {
+				var data = e.data.data;
+				switch(e.data.message) {
+					case 'content_height_change':
+						var height = data;
+						$("#content-home").height(height);
+						break;
+				}
+			}
+	  	},
+	false);
+
+	// send cta click message to iframe
+	var win = document.getElementById("content-home").contentWindow;
+	$("#floatingCTA").click(function(){
+		var origin = window.location.origin != "file://" ? window.location.origin : "*";
+		win.postMessage({message: "apply"}, origin);              
+	});		
 });		
