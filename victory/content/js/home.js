@@ -52,7 +52,7 @@ $(document).ready(function(){
     // listen for messages from parent 
     window.addEventListener( "message",
         function (e) {
-            if(e.origin == receive_origin) {
+            if(!receive_origin || e.origin == receive_origin) {
                 var data = e.data.data;
                 switch(e.data.message) {
                     case 'apply':
