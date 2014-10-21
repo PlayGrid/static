@@ -1,5 +1,6 @@
 var $adminMenu = $('#admin-menu');
 var $menuFixed = $('#menu-fixed');
+var $applyModal = $('#apply-modal');
 var $hidden = true;
 
 	

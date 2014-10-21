@@ -1,4 +1,3 @@
-var $applyModal = $('#apply-modal');
 var vimeoPlayer = $f($('#vimeoplayer')[0]);
 
 $(document).ready(function(){
