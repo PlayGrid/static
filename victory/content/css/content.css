@@ -3,31 +3,13 @@
    ========================================================================== */
 
 body {
-    padding-top: 80px;
+    padding-top: 0px;
     padding-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     background-color: #111;
     color: #f0f0f0;
 }
 
-.navbar {
-	min-height: 30px;
-	max-height: 30px;
-	height: 30px;
-	line-height: 30px;
-}
-
-.navbar a, .navbar a:visited {
-	line-height: 30px;
-	color: #f0f0f0;
-	font-size: 12px;
-}
-
-
-.navbar img.language {
-	margin-top: -2px;
-	margin-right: 5px;
-}
 
 @media (min-width: 1200px) {
 	.container {
@@ -44,68 +26,6 @@ h1 {
 	font-size: 60px;
 }
 
-#logo {
-	position: absolute;
-	top: 10px;
-	left: 15px;
-	z-index: 999 !important;
-}
-
-#menu {
-	background: url(../img/menu.png) no-repeat top center scroll transparent;
-	margin: 0;
-	padding: 0 1px;
-	border-top: 1px solid #000;
-	position: relative;
-}
-
-#menu .menu-container {
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-bottom: 1px solid #939393;
-	height: 58px;
-}
-
-#menu .navbar-right {
-	float: right!important;
-}
-
-#menu .navbar-nav>li {
-	float: left;
-}
-
-#menu ul {
-	margin: 0;
-	border-left: 1px solid #000;
-}
-
-
-#menu li a,
-#menu li a:visited {
-	padding: 8px 10px 12px;
-	width: 80px;
-	border-left: 1px solid rgba(255,255,255, 0.10);
-	border-right: 1px solid #000;
-	font: 300 24px 'Oswald', 'Raleway', sans-serif;
-	color: #f0f0f0;
-}
-
-@media(min-width: 768px) {
-	#menu li a,
-	#menu li a:visited {
-		width: 125px;
-	}
-}
-
-#menu li:last-of-type a,
-#menu li:last-of-type a:hover {
-	border-right: 0;
-}
-
-
-#menu li a:hover {
-	background-color: #a22; /*871515;*/
-}
-
 #video {
 	height: 551px;
 	background: url(../img/hero.png) no-repeat top center scroll transparent;
@@ -113,7 +33,6 @@ h1 {
 	cursor: pointer;
 	display: table;
 	width: 100%;
-	border-top: 1px solid #939393;
 	border-bottom: 1px solid #939393;
 }
 
@@ -223,71 +142,6 @@ hr {
   content: "s";
 }
 
-
-
-/*
-    Daron's Style Additions 
- */
-
-body {
-    padding-top: 50px;
-}
-
-#sign-up {
-    display: none;
-}
-
-#apply-modal .modal-content,
-#apply-modal button, 
-#apply-modal button:hover, 
-#apply-modal .form-control {
-    background-color: #000;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #fff;
-}
-#apply-modal textarea {
-    resize: none;
-}
-
-#apply-modal .modal-content {
-    border-radius: 8px;
-}
-
-#earlyAccess h2 {
-	text-align: center;
-}
-
-.modal-dialog {
-	margin-top: 100px;
-}
-
-.navbar a, .navbar a:visited {
-    line-height: 9px;
-}
-
-.nav>li>a:hover, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    color: #fff;
-    text-decoration: none;
-    background-color: #3F3F3F;
-}
-
-.open>.dropdown-menu {
-    background-color: #3F3F3F;
-}
-
-
-#messages .alert {
-    margin: 0px 15px 0px 15px;
-}
-.alert-success {
-	background-image: -webkit-linear-gradient(top,#97C386 0,#31A800 100%);
-	background-image: linear-gradient(to bottom,#97C386 0,#31A800 100%);
-	form.Microsoft.gradient(startColorstr='#97C386', endColorstr='#31A800', GradientType=0);
-	border-color: #1A5A00;
-	color: #D5FCDB;
-}
 
 .watch-bar {
     background-color: rgba(255, 255, 255, 0.31);

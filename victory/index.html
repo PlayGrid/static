@@ -26,6 +26,21 @@
 		</div>
 
 		<div class="container-fluid">
+			<div class="container">
+				<div id="menu">
+			        <div class="menu-container clearfix">
+			            <ul class="nav navbar-nav navbar-right">
+			                <li><a href="#" data-scroll="menu" class="scroll">HOME</a></li>
+			                <li><a href="#" data-toggle="modal" data-target="#apply-modal">JOIN</a></li>
+			                <li><a href="#" data-scroll="about" class="scroll">ABOUT</a></li>
+			            </ul>
+			        </div>
+			        <div id="logo">
+			            <img src="./img/logo.png" alt="Victory Command" title="Victory Command" />
+			        </div>
+			    </div>
+			</div>
+
 			<iframe id="content-home" frameborder="0" src="./content/home.html" scrolling="no" seamless="seamless" style="border:none; overflow: hidden;" width="100%" height="2000px">Browser not compatible.</iframe>
 			
 			<footer>
@@ -50,7 +65,7 @@
 
 			<div class="row">
 				<div class="col-lg-12 text-center">
-				   <small class="text-muted">&copy; {% now "Y" %} Victory Game Company LLC.</small>
+				   <small class="text-muted">&copy; 2014 Victory Game Company LLC.</small>
 				</div>
 			</div>
 
@@ -61,6 +76,29 @@
 					    REQUEST EARLY ACCESS
 					</p>
 				</a>
+			</div>
+
+			<!-- Apply Modal -->
+			<div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			    <div class="modal-dialog">
+			        <div class="modal-content">
+		                <form id="earlyAccess">
+		                    <h2>APPLY FOR EARLY ACCESS</h2>
+				            <div class="modal-body">
+									<div class="form-group input-required">
+									    <input id="email" name="text" type="email" placeholder="Your email address (required)" class="form-control" required />
+									</div>
+									<div class="form-group">
+									    <textarea id="note" name="textarea" placeholder="Tell us why you would like early access." class="form-control" rows="5"></textarea>
+									</div>
+									<div class="has-error">
+		                                <p class="errors help-block"></p>
+									</div>
+					                <button type="submit" class="btn">Apply</button>
+				            </div>
+		                </form>
+			        </div>
+			    </div>
 			</div>
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -27,24 +27,21 @@ $(document).ready(function(){
         $('#video').show();
         $('#player-wrapper').hide()
     }
-
-
-
-    $('.scroll').on('click', function(e){
-    	e.preventDefault();
-    	$('html, body').animate({
-        	scrollTop: $("#"+$(this).data('scroll')).offset().top - 100
-    	}, 200);
-    });
     
     // detect content height changes and post to parent
     var prevHeight = $('#content').height();
+    var prevAboutOffset = $('#about').offset().top;
     postMessage("content_height_change", prevHeight, send_origin);
     $( window ).resize(function() {
         var curHeight = $("#content").height();            
         if (prevHeight !== curHeight) {
             postMessage("content_height_change", curHeight, send_origin);
             prevHeight = curHeight;
+        }                 
+        var curAboutOffset = $('#about').offset().top;           
+        if (prevAboutOffset !== curAboutOffset) {
+            postMessage("about_offset_change", curAboutOffset, send_origin);
+            prevAboutOffset = curAboutOffset;
         }            
     });
 
@@ -62,43 +59,6 @@ $(document).ready(function(){
             }
         }, 
     false);
-
-
-
-    // Beta signup form ajax
-    $('#earlyAccess').submit(function (event) {
-        /* stop form from submitting normally */
-        event.preventDefault();
-
-        var url = getQueryParameter('apply_url');
-        if (url) {
-            var request = $.ajax({
-                type: "POST",
-                url: url,
-                data: {email: $('#email').val(), note: $('#note').val()},
-                headers: {Authorization: "PGP {{ request.game.untrusted_access_token }}"},
-                dataType: 'json'
-            });
- 
-            request.done(function( msg ) {
-                $("#earlyAccess .errors").empty();
-                $('#apply-modal').modal('hide');
-                $('#messages .thanks').remove();
-                $('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
-                $('#messages .thanks').slideDown().delay(5000).slideUp();
-                ga('send', 'event', 'beta', 'signup', 'cta');
-            });
-     
-            request.fail(function( jqXHR, textStatus ) {
-                var message = "foo";
-                for(var key in jqXHR.responseJSON) {
-                    $("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
-                }
-            });
-        } else {
-            $("#earlyAccess .errors").append("<p>beta form requires 'apply_url' provided as query param</p>");
-        }
-    });   
 })
 
 
