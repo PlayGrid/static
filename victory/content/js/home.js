@@ -1,5 +1,16 @@
 var vimeoPlayer = $f($('#vimeoplayer')[0]);
 
+// When the player is ready, add listeners for pause, finish, and playProgress
+vimeoPlayer.addEvent('ready', function() {
+    $('.watch').show();
+    vimeoPlayer.addEvent('finish', onFinish);
+});
+
+function onFinish(id) {
+    $('#video').show();
+    $('#player-wrapper').hide()
+}
+
 $(document).ready(function(){
     // set the origin to "*" if running on test or local
     var origin = window.location.origin;
@@ -7,25 +18,14 @@ $(document).ready(function(){
     var send_origin = testing ? "*" : origin;
     var receive_origin = testing ? null : origin;
 
-    // When the player is ready, add listeners for pause, finish, and playProgress
-    vimeoPlayer.addEvent('ready', function() {
-        $('.watch').show();
-        vimeoPlayer.addEvent('finish', onFinish);
-    });
-
     // Call the API when a button is pressed
     $('#video').on('click', function() {
-    	vimeoPlayer.api('play');
-    	if (typeof ga != 'undefined')
-    		ga('send', 'event', 'videos', 'play', 'Trailer01');
-    	$('#video').hide();
-    	$('#player-wrapper').show()
+        vimeoPlayer.api('play');
+        if (typeof ga != 'undefined')
+            ga('send', 'event', 'videos', 'play', 'Trailer01');
+        $('#video').hide();
+        $('#player-wrapper').show()
     });
-
-    function onFinish(id) {
-        $('#video').show();
-        $('#player-wrapper').hide()
-    }
     
     // detect content height changes and post to parent
     var prevHeight = $('#content').height();
