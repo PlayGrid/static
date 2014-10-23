@@ -886,7 +886,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #888888;
-  background-color: #060606;
+  background-color: #111111;
 }
 input,
 button,
@@ -2080,7 +2080,7 @@ th {
   border-top: 2px solid #282828;
 }
 .table .table {
-  background-color: #060606;
+  background-color: #111111;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -3669,7 +3669,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #060606;
+    border-bottom-color: #111111;
   }
 }
 .nav-pills > li {
@@ -3737,7 +3737,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #060606;
+    border-bottom-color: #111111;
   }
 }
 .tab-content > .tab-pane {
@@ -4073,7 +4073,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #060606;
+  background-color: #111111;
   border-color: #282828;
 }
 .navbar-default .navbar-brand {
@@ -5381,7 +5381,7 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #202020;
+  background-color: #2b2b2b;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -5570,7 +5570,7 @@ button.close {
   max-width: 276px;
   padding: 1px;
   text-align: left;
-  background-color: #202020;
+  background-color: #2b2b2b;
   background-clip: padding-box;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -5597,8 +5597,8 @@ button.close {
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #181818;
-  border-bottom: 1px solid #0b0b0b;
+  background-color: #232323;
+  border-bottom: 1px solid #161616;
   border-radius: 5px 5px 0 0;
 }
 .popover-content {
@@ -5633,7 +5633,7 @@ button.close {
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
-  border-top-color: #202020;
+  border-top-color: #2b2b2b;
 }
 .popover.right > .arrow {
   top: 50%;
@@ -5648,7 +5648,7 @@ button.close {
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
-  border-right-color: #202020;
+  border-right-color: #2b2b2b;
 }
 .popover.bottom > .arrow {
   left: 50%;
@@ -5663,7 +5663,7 @@ button.close {
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
-  border-bottom-color: #202020;
+  border-bottom-color: #2b2b2b;
 }
 .popover.left > .arrow {
   top: 50%;
@@ -5677,7 +5677,7 @@ button.close {
   content: " ";
   right: 1px;
   border-right-width: 0;
-  border-left-color: #202020;
+  border-left-color: #2b2b2b;
   bottom: -10px;
 }
 .carousel {
@@ -7961,7 +7961,7 @@ END
 .footer {
   margin: 0;
   padding: 0;
-  background: #060606;
+  background: #111111;
 }
 .footer > .container {
   margin: 0;
@@ -8055,7 +8055,7 @@ END
 .nav.nav-list > li:not(:last-child):not(.open) > a,
 .nav.nav-list > li.open > a,
 .nav.nav-list > li.open > ul > li > a {
-  border-bottom: 1px solid #060606;
+  border-bottom: 1px solid #111111;
 }
 .nav.nav-list > li + li {
   margin-top: 0;
@@ -8116,7 +8116,7 @@ body.navbar-fixed {
   padding-top: 50px;
 }
 #page-wrap {
-  background: #060606;
+  background: #111111;
   height: auto;
   min-height: 100%;
 }
