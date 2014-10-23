@@ -1,4 +1,4 @@
-var $adminMenu = $('#admin-menu');
+var $adminMenu = $('.navbar');
 var $menuFixed = $('#menu-fixed');
 var $applyModal = $('#apply-modal');
 var $hidden = true;
