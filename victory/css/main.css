@@ -29,25 +29,6 @@ h1 {
 	}
 }
 
-.navbar {
-	min-height: 30px;
-	max-height: 30px;
-	height: 30px;
-	line-height: 30px;
-}
-
-.navbar a, .navbar a:visited {
-	line-height: 30px;
-	color: #f0f0f0;
-	font-size: 12px;
-}
-
-
-.navbar img.language {
-	margin-top: -2px;
-	margin-right: 5px;
-}
-
 #menu-fixed {
 	position: fixed;
 	top: 5px;
