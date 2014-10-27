@@ -23,6 +23,13 @@ h1 {
 	font-size: 60px;
 }
 
+h2.about {
+	margin: 2em 0;
+	color: #f0f0f0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		width: 1010px;
