@@ -1,0 +1,34 @@
+		  body {
+		      background-image: url("http://placehold.it/1002x603");
+		      background-repeat: no-repeat;
+		      width: 1002px;
+		      height: 603px;
+		      padding-top: 30px;
+		  }
+		  .widget_recent_news {
+		      position: fixed;
+		      top: 30px;
+		      left: 630px;
+		      width: 350px;
+		  }
+		  #footer,
+		  .widget_recent_news {
+		      background-color: rgba(24, 24, 24, 0.70);
+		  }
+		  #footer {
+		      position: absolute;
+		      bottom: 0px;   
+		      margin: 0px;
+		      padding-left: 15px;
+		      width: 100%;
+		  }
+		  #footer li {
+		      display: inline-block;
+		      list-style-type: none;
+		      padding: 7px;
+		  }
+		  #footer li a {
+		      text-transform: uppercase;
+		      font-weight: bold;
+		      color: #fff;
+		  }
