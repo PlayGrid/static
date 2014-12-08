@@ -13,8 +13,8 @@
 		      width: 350px;
 		  }
 		  a.news {
-		  	color: #fff;
-		  	text-decoration: none;
+		  	color: #fff !important;
+		  	text-decoration: none !important;
 		  }
 
 
