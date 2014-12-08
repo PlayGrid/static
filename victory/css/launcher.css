@@ -13,7 +13,8 @@
 		      width: 350px;
 		  }
 		  .widget_recent_news .panel-heading {
-		  	background-color: #000;
+		  	background-image: url("../img/rgb181818.7.png");
+		  	background-color: transparent;
 		  }
 		  a.news {
 		  	color: #fff !important;
