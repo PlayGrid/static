@@ -1,5 +1,5 @@
 		  body {
-		      background-image: url("http://placehold.it/1002x603");
+		      background-image: url("../img/launcher.jpg");
 		      background-repeat: no-repeat;
 		      width: 1002px;
 		      height: 603px;
@@ -11,6 +11,10 @@
 		      top: 30px;
 		      left: 630px;
 		      width: 350px;
+		  }
+		  .widget_recent_news .panel-heading {
+		  	background-image: url("../img/rgb181818.7.png");
+		  	background-color: transparent;
 		  }
 		  a.news {
 		  	color: #fff !important;
