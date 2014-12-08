@@ -13,7 +13,7 @@
 		  }
 		  #footer,
 		  .widget_recent_news {
-		      background-color: rgba(24, 24, 24, 0.70);
+		      background-image: url("../img/rgb181818.7.png");
 		  }
 		  #footer {
 		      position: absolute;
@@ -26,6 +26,8 @@
 		      display: inline-block;
 		      list-style-type: none;
 		      padding: 7px;
+		      zoom: 1;
+    		  *display: inline;
 		  }
 		  #footer li a {
 		      text-transform: uppercase;
