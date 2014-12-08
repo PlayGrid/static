@@ -46,3 +46,12 @@
 		      font-weight: bold;
 		      color: #fff;
 		  }
+		  
+		  #legal {
+		      padding-top: 12px;
+		  }
+		  #legal small {
+		  	color: #444;
+		  	font-size: 80%;
+		  }
+		  
