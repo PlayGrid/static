@@ -12,6 +12,9 @@
 		      left: 630px;
 		      width: 350px;
 		  }
+		  .widget_recent_news .panel-heading {
+		  	background-color: #000;
+		  }
 		  a.news {
 		  	color: #fff !important;
 		  	text-decoration: none !important;
