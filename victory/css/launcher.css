@@ -21,7 +21,7 @@
 		  #footer,
 		  .widget_recent_news {
 		      background-image: url("../img/rgb181818.7.png");
-		      background-color: none;
+		      background-color: transparent;
 		  }
 		  #footer {
 		      position: absolute;
