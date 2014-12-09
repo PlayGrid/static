@@ -127,7 +127,8 @@ h2.about {
 @media(min-width: 768px) {
 	#menu li a,
 	#menu li a:visited {
-		width: 125px;
+		width: 143px;
+		text-align: center;
 	}
 }
 
