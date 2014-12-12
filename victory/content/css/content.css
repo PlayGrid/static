@@ -28,7 +28,7 @@ h1 {
 
 #video {
 	height: 551px;
-	background: url(../img/hero.png) no-repeat top center scroll transparent;
+	background: url(../img/hero.jpg) no-repeat top center scroll transparent;
 	background-size: cover;
 	cursor: pointer;
 	display: table;
