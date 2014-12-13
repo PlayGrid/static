@@ -12,24 +12,19 @@
               left: 514px;
               width: 377px;
 		  }
-		  .widget_recent_news .panel-heading {
+		  #footer,
+		  .panel, .panel-heading {
 		  	background-image: url("../img/rgb181818.7.png");
 		  	background-color: transparent;
 		  }
-		  .widget_recent_news table {
-		  	background-color: transparent;
+		  table {
+		  	background-color: transparent !important;
 		  }
 		  a.news {
 		  	color: #fff !important;
 		  	text-decoration: none !important;
 		  }
 
-
-		  #footer,
-		  .widget_recent_news {
-		      background-image: url("../img/rgb181818.7.png");
-		      background-color: transparent;
-		  }
 		  #footer {
 		      position: absolute;
 		      bottom: 0px;   
