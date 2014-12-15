@@ -88,7 +88,7 @@ $(document).ready(function(){
         var request = $.ajax({
             type: "POST",
             url: url,
-            data: {email: $('#email').val(), note: $('#note').val()},
+            data: {email: $('#email').val(), note: $('#note').val(), campaign: "www.victory-command.com"},
             headers: {Authorization: token},
             dataType: 'json'
         });
