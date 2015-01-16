@@ -13,6 +13,7 @@ $(document).ready(function(){
 	var send_origin = testing ? "*" : origin;
 	var receive_origin = testing ? null : origin;
 	var aboutOffset;
+    var referrer = document.referrer;
 
     // handle top menu on scroll
 	$(window).scroll(function(){
@@ -76,37 +77,4 @@ $(document).ready(function(){
 			}
 	  	},
 	false);
-
-
-    // Beta signup form ajax
-    $('#earlyAccess').submit(function (event) {
-        /* stop form from submitting normally */
-        event.preventDefault();
-
-        var url = getQueryParameter('apply_url') || "http://api.playgrid.com/api/2.1/players/apply/";
-        var token = $("#earlyAccess").attr("data-token");
-        var request = $.ajax({
-            type: "POST",
-            url: url,
-            data: {email: $('#email').val(), note: $('#note').val(), campaign: "www.victory-command.com"},
-            headers: {Authorization: token},
-            dataType: 'json'
-        });
-
-        request.done(function( msg ) {
-            $("#earlyAccess .errors").empty();
-            $('#apply-modal').modal('hide');
-            $('#messages .thanks').remove();
-            $('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
-            $('#messages .thanks').slideDown().delay(5000).slideUp();
-            ga('send', 'event', 'beta', 'signup', 'cta');
-        });
- 
-        request.fail(function( jqXHR, textStatus ) {
-            var message = "foo";
-            for(var key in jqXHR.responseJSON) {
-                $("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
-            }
-        });
-    });   
 });		

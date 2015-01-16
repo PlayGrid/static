@@ -1,15 +1,3 @@
-var vimeoPlayer = $f($('#vimeoplayer')[0]);
-
-// When the player is ready, add listeners for pause, finish, and playProgress
-vimeoPlayer.addEvent('ready', function() {
-    $('.watch').show();
-    vimeoPlayer.addEvent('finish', onFinish);
-});
-
-function onFinish(id) {
-    $('#video').show();
-    $('#player-wrapper').hide()
-}
 
 $(document).ready(function(){
     // set the origin to "*" if running on test or local
