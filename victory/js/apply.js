@@ -3,14 +3,15 @@ $(document).ready(function(){
 
     // determine campaign & save to local storage
     var campaign;
-    var storedCampaign = Modernizr.localstorage ? localStorage.getItem("campaign") : null;
-    campaign = getQueryParameter('campaign'); // query param is highest priority for setting campaign
-    campaign = campaign || storedCampaign; // existing localStorage is second
-    campaign = campaign || document.referrer; // referrer is third
-    campaign = campaign || 'direct'; // finally, default to direct
-    if(Modernizr.localstorage)
-    	localStorage.setItem("campaign", campaign);
-    campaign = "www.victory-command.com (" + campaign + ')';
+    var referrer;
+    if(Modernizr.localstorage) {
+    	referrer = localStorage.getItem("referrer") || document.referrer || 'direct';
+    	localStorage.setItem("referrer", referrer); // save referrer off in case the user navigates around
+    } else {
+    	referrer = document.referrer || 'direct';
+    }
+
+    campaign = getQueryParameter('campaign') || 'www.victory-command.com';
 
 
     // Beta signup form ajax
@@ -26,7 +27,7 @@ $(document).ready(function(){
             data: {
             	email: $('#email').val(), 
             	note: $('#note').val(), 
-            	campaign: campaign},
+            	campaign: campaign + ": " + referrer},
             headers: {Authorization: token},
             dataType: 'json'
         });
