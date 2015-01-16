@@ -162,6 +162,10 @@ hr {
     border-top-color: #333;
 }
 
+.btn-danger {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
 
 
 
