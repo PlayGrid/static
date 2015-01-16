@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="./css/lightbox.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
 		<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
-		<link rel="stylesheet" href="./content/css/style.css">
 		<link rel="stylesheet" href="./content/css/content.css">
 	</head>
 
@@ -159,28 +158,38 @@
 
 			<!-- Apply Modal -->
 			<div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			    <div class="modal-dialog">
-			        <div class="modal-content">
-		                <form id="earlyAccess" data-token="PGP df9ce5665ab653abc77e4987e253b897a40c7180">
-		                    <h2>APPLY FOR EARLY ACCESS</h2>
-				            <div class="modal-body">
-									<div class="form-group input-required">
-									    <input id="email" name="text" type="email" placeholder="Your email address (required)" class="form-control" required />
-									</div>
-									<div class="form-group">
-									    <textarea id="note" name="textarea" placeholder="Tell us why you would like early access." class="form-control" rows="5"></textarea>
-									</div>
-									<div class="has-error">
-		                                <p class="errors help-block"></p>
-									</div>
-					                <button type="submit" class="btn">Apply</button>
-				            </div>
-		                </form>
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <form id="earlyAccess" data-token="PGP df9ce5665ab653abc77e4987e253b897a40c7180">
+			        <h2>APPLY FOR EARLY ACCESS</h2>
+			        <div class="modal-body">
+			          <div class="form-group input-required">
+			            <input id="email" name="text" type="email" placeholder="Your email address (required)" class="form-control" required />
+			          </div>
+			          <div class="form-group">
+			            <textarea id="note" name="textarea" placeholder="Tell us why you would like early access." class="form-control" rows="5"></textarea>
+			          </div>
+			          <div class="has-error">
+			            <p class="errors help-block"></p>
+			          </div>
+			          <button type="submit" class="btn">Apply</button>
 			        </div>
+			      </form>
 			    </div>
+			  </div>
 			</div>
 
 
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-55699318-1', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
 
 
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -197,9 +206,6 @@
 			$(".victory").popover({ trigger: "hover", placement: "top"});
 			</script>
 
-
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 				
 		
 		</div>
