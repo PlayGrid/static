@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="./css/bootstrap.min.css">
-		<link rel="stylesheet" href="./css/main.css">
-		<link rel="stylesheet" href="./css/lightbox.css">
+		<title>Victory Command - Beta Signup</title>
+		<meta name="description" content="Victory Command is a free-to-play RTS that pits you and four of your friends against five enemies in tactical combat.">
+		<meta name="keywords" content="online game, free-2-play, free-to-play, rts, real-time-strategy, moba, team, petroglyph, battle">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/lightbox.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Oswald:400,300' rel='stylesheet' type='text/css'>
-		<script src="./js/vendor/modernizr-2.6.2.min.js"></script>
-		<link rel="stylesheet" href="./content/css/content.css">
+		<script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+		<link rel="stylesheet" href="../content/css/content.css">
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		</script>
 	</head>
 
 	<body>
@@ -29,7 +38,7 @@
 			            </ul>
 			        </div>
 			        <div id="logo">
-			            <img src="./img/logo.png" alt="Victory Command" title="Victory Command" />
+			            <img src="../img/logo.png" alt="Victory Command" title="Victory Command" />
 			        </div>
 			    </div>
 			</div>
@@ -123,14 +132,14 @@
 			  <h2 class="about">SCREENSHOTS</h2>
 			  <div class="row">
 			    <div class="col-md-6">
-			      <a href="./img/SS0001.png" data-lightbox="hr" data-title="Screenshot-01">
-			        <img class="img-rounded img-responsive center-block" src="./img/SS0001-sm.png" alt="Screenshot 01" />
+			      <a href="../img/SS0001.png" data-lightbox="hr" data-title="Screenshot-01">
+			        <img class="img-rounded img-responsive center-block" src="../img/SS0001-sm.png" alt="Screenshot 01" />
 			      </a>
 			    </div>
 			    <br class="visible-sm visible-xs">
 			    <div class="col-md-6">
-			      <a href="./img/SS0002.png" data-lightbox="hr" data-title="Screenshot-01">
-			        <img class="img-rounded img-responsive center-block" src="./img/SS0002-sm.png" alt="Screenshot 01" />
+			      <a href="../img/SS0002.png" data-lightbox="hr" data-title="Screenshot-01">
+			        <img class="img-rounded img-responsive center-block" src="../img/SS0002-sm.png" alt="Screenshot 01" />
 			      </a>
 			    </div>
 			  </div>
@@ -141,17 +150,17 @@
 				<div class="row">
 					<div class="col-xs-4 text-center">
 						<a href="http://www.petroglyphgames.com/" target="blank">
-						<img src="./img/petroglyph-logo-sm.png" alt="Petroglyph Games" />
+						<img src="../img/petroglyph-logo-sm.png" alt="Petroglyph Games" />
 						</a>
 					</div>
 					<div class="col-xs-4 text-center">
 						<a href="http://www.cdrvmedia.com/" target="blank">
-						<img src="./img/cdrv-logo-sm.png" alt="CDRV Media" />
+						<img src="../img/cdrv-logo-sm.png" alt="CDRV Media" />
 						</a>
 					</div>
 					<div class="col-xs-4 text-center">
 						<a href="http://www.neoact.com/" target="blank">
-						<img src="./img/neoact-logo-sm.png" alt="Neoact" />
+						<img src="../img/neoact-logo-sm.png" alt="Neoact" />
 						</a>
 					</div>
 				</div>
@@ -172,9 +181,6 @@
 			        <div class="modal-body">
 			          <div class="form-group input-required">
 			            <input id="email" name="text" type="email" placeholder="Your email address (required)" class="form-control" required />
-			          </div>
-			          <div class="form-group">
-			            <textarea id="note" name="textarea" placeholder="Tell us why you would like early access." class="form-control" rows="5"></textarea>
 			          </div>
 			          <div class="has-error">
 			            <p class="errors help-block"></p>
@@ -200,18 +206,25 @@
 
 
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-			<script src="./js/vendor/bootstrap.min.js"></script>
-			<script src="./js/vendor/lightbox.min.js"></script>
+			<script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+			<script src="../js/vendor/bootstrap.min.js"></script>
+			<script src="../js/vendor/lightbox.min.js"></script>
 			<script src="http://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-			<script src="./content/js/video.js"></script>
-			<script src="./content/js/utils.js"></script>
-			<script src="./js/apply.js"></script>
+			<script src="../content/js/video.js"></script>
+			<script src="../content/js/utils.js"></script>
+			<script src="../js/apply.js"></script>
 			
 			<script type="text/javascript">
 			/* victory icon popovers */
 			$(".victory").popover({ trigger: "hover", placement: "top"});
 			</script>
+
+			<script>
+				$(document).ready(function(){				
+					ga('create', 'UA-55699318-1', 'auto', { 'campaign': victory_campaign });
+					ga('send', 'pageview');
+				});
+			</script>			
 
 				
 		

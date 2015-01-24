@@ -15,3 +15,15 @@ function onFinish(id) {
     $('#video').show();
     $('#player-wrapper').hide()
 }
+
+$(document).ready(function(){
+
+    // Call the API when a button is pressed
+    $('#video').on('click', function() {
+        vimeoPlayer.api('play');
+        if (typeof ga != 'undefined')
+            ga('send', 'event', 'videos', 'play', 'Trailer01');
+        $('#video').hide();
+        $('#player-wrapper').show()
+    });
+})

@@ -137,10 +137,14 @@ h2.about {
 	border-right: 0;
 }
 
-
+#menu li a:focus {
+	background-color: transparent;
+	outline: none;
+}
 #menu li a:hover {
 	background-color: #a22; /*871515;*/
 }
+
 
 #sign-up {
     display: none;

@@ -1,8 +1,8 @@
+var victory_campaign;
 
 $(document).ready(function(){
 
     // determine campaign & save to local storage
-    var campaign;
     var referrer;
     if(Modernizr.localstorage) {
     	referrer = localStorage.getItem("referrer") || document.referrer || 'direct';
@@ -11,7 +11,7 @@ $(document).ready(function(){
     	referrer = document.referrer || 'direct';
     }
 
-    campaign = getQueryParameter('campaign') || 'www.victory-command.com';
+    victory_campaign = getQueryParameter('campaign') || location.href;
 
 
     // Beta signup form ajax
@@ -26,8 +26,7 @@ $(document).ready(function(){
             url: url,
             data: {
             	email: $('#email').val(), 
-            	note: $('#note').val(), 
-            	campaign: campaign + ": " + referrer},
+            	campaign: victory_campaign + " (" + referrer + ')'},
             headers: {Authorization: token},
             dataType: 'json'
         });
@@ -38,7 +37,7 @@ $(document).ready(function(){
             $('#messages .thanks').remove();
             $('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
             $('#messages .thanks').slideDown().delay(5000).slideUp();
-            ga('send', 'event', 'beta', 'signup', 'cta');
+            ga('send', 'pageview', {'page': '/vpv/apply/success/', 'title': 'Apply Success'});
         });
  
         request.fail(function( jqXHR, textStatus ) {
@@ -46,6 +45,7 @@ $(document).ready(function(){
             for(var key in jqXHR.responseJSON) {
                 $("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
             }
+            ga('send', 'pageview', {'page': '/vpv/apply/error/', 'title': 'Apply Errors'});
         });
     });
 });
