@@ -38,6 +38,7 @@ $(document).ready(function(){
             $('#messages').append('<div class="thanks alert alert-success" style="display:none" role="alert">Thanks for applying!</div>');
             $('#messages .thanks').slideDown().delay(5000).slideUp();
             ga('send', 'pageview', {'page': '/vpv/apply/success/', 'title': 'Apply Success'});
+            mixpanel.track("Apply Success");
         });
  
         request.fail(function( jqXHR, textStatus ) {
@@ -46,6 +47,7 @@ $(document).ready(function(){
                 $("#earlyAccess .errors").append("<p>"+jqXHR.responseJSON[key]+"</p>");
             }
             ga('send', 'pageview', {'page': '/vpv/apply/error/', 'title': 'Apply Errors'});
+            mixpanel.track("Apply Error");
         });
     });
 });

@@ -1,56 +1,109 @@
-		  body {
-		      background-image: url("../img/launcher.jpg");
-		      background-repeat: no-repeat;
-		      width: 1002px;
-		      height: 603px;
-		      padding-top: 30px;
-		  }
+body {
+  background-color: #111111;
+  background-repeat: no-repeat;
+  width: 1002px;
+  height: 603px;
+  padding-top: 30px;
+}
 
-		  .widget_recent_news {
-		      position: fixed;
-		      top: 191px;
-              left: 514px;
-              width: 377px;
-		  }
-		  #footer,
-		  .panel, .panel-heading {
-		  	background-image: url("../img/rgb181818.7.png");
-		  	background-color: transparent;
-		  }
-		  table {
-		  	background-color: transparent !important;
-		  }
-		  a.news {
-		  	color: #fff !important;
-		  	text-decoration: none !important;
-		  }
+.warning {
+	color: rgb(255, 30, 0);
+	background-color: rgba(0,0,0,0.5);
+}
 
-		  #footer {
-		      position: absolute;
-		      bottom: 0px;   
-		      margin: 0px;
-		      padding-left: 15px;
-		      padding-right: 30px;
-		      width: 100%;
-		  }
-		  #footer li {
-		      display: inline-block;
-		      list-style-type: none;
-		      padding: 7px;
-		      zoom: 1;
-    		  *display: inline;
-		  }
-		  #footer li a {
-		      text-transform: uppercase;
-		      font-weight: bold;
-		      color: #fff;
-		  }
-		  
-		  #legal {
-		      padding-top: 12px;
-		  }
-		  #legal small {
-		  	color: #767676;
-		  	font-size: 80%;
-		  }
+.logo {
+	background-image: url("../img/Logo_Victory_330px.png");
+	width: 330px;
+	height: 122px;
+	position: fixed;
+	top: 6px;
+}
+
+#videos-link {
+	position: fixed;
+	top: 138px;
+	left: 63px;
+}
+
+.widget_recent_news {
+	position: fixed;
+	top: 14px;
+	left: 615px;
+	width: 377px;
+}
+
+#footer,
+.panel, .panel-heading {
+	background-image: url("../img/rgb181818.7.png");
+	background-color: transparent;
+}
+table {
+	background-color: transparent !important;
+}
+a.news {
+	color: #fff !important;
+	text-decoration: none !important;
+	font-size: 13px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;   
+  margin: 0px;
+  padding-left: 15px;
+  padding-right: 30px;
+  width: 100%;
+}
+#footer li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 7px;
+  zoom: 1;
+  *display: inline;
+}
+#footer li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+#legal {
+  padding-top: 12px;
+}
+#legal small {
+	color: #767676;
+	font-size: 80%;
+}
+
+#countdown-wrapper {
+	margin-top: 397px;
+	margin-left: 196px;
+	width: 639px;
+}
+
+.flip-clock-dot {
+	background: #AAA !important;
+}
+
+.flip-clock-divider .flip-clock-label,
+.in-progress {
+	color: white !important;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1) !important;
+}
+
+h2.in-progress {
+	font-size: 39px;
+	margin: 5px;
+}
+.in-progress {
+	text-align: center;
+}
+
+
+.next-playtest {
+	text-align: center;
+	margin-top: -10px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
 		  
