@@ -133,15 +133,29 @@ $(document).ready(function(){
 
 	$('body').css('background-image', 'url("'+site_static+'img/launcher/launcher'+page_load_time%19+'.jpg")');
 
-	// get schedule
+	// get schedule from document
 	if(playtest_schedule.length == 0) {
 		var $dates = $('#playtest-schedule').children();
 		$dates.each(function() {
 			playtest_schedule.push($(this).html());
 		});		
 	}
+                  
+    // get schedule from atom feed & append
+    var feed_url = $('#countdown-wrapper').data('feed-url')
+    if (feed_url) {
+        $.get(feed_url, function(data) {
+            $(data).find("entry summary").each(function() {
+                var $this = $(this);
+                playtest_schedule.push($(this).html());
+                });
+            }).always(function() {
+                setTimeout(initCountdown, 500);
+            });
+    } else {
+        setTimeout(initCountdown, 500);
+    }
 
-	setTimeout(initCountdown, 500);
 
 	setTimeout(function(){
 	   window.location.reload(1);
