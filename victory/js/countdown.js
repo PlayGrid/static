@@ -147,7 +147,10 @@ $(document).ready(function(){
         $.get(feed_url, function(data) {
             $(data).find("entry summary").each(function() {
                 var $this = $(this);
-                playtest_schedule.push($(this).html());
+                var schedule_event = $(this).text();
+                if (schedule_event) {
+                    playtest_schedule.push(schedule_event);
+                }
                 });
             }).always(function() {
                 setTimeout(initCountdown, 500);
