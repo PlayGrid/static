@@ -159,6 +159,7 @@ $(document).ready(function(){
         setTimeout(initCountdown, 500);
     }
 
+  $countdown_wrapper.remove();
 
 	setTimeout(function(){
 	   window.location.reload(1);
